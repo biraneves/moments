@@ -1,0 +1,18 @@
+@use "../../../../sass/functions";
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: functions.px2rem(32px);
+
+  h2,
+  p {
+    margin-bottom: functions.px2rem(16px);
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
