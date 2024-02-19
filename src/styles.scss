@@ -52,4 +52,17 @@ form {
     color: vars.$colorPrimary;
     font-size: functions.px2rem(14px);
   }
+
+  textarea {
+    resize: none;
+  }
+}
+
+.validation-error {
+  p {
+    color: vars.$colorError;
+    margin-top: functions.px2rem(6px);
+    border-left: 3px solid vars.$colorError;
+    padding-left: functions.px2rem(4px);
+  }
 }
