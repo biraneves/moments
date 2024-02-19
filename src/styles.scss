@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@use "sass/reset";
+@use "sass/vars";
+@use "sass:math";
+
+@function px2rem($targetSize, $baseSize: 16px) {
+  @return math.div($targetSize, $baseSize) + rem;
+}
+
+a {
+  text-decoration: none;
+  color: vars.$colorPrimary;
+  transition: color ease 0.4s;
+
+  &:hover {
+    color: vars.$colorHighlight;
+    transition: color ease 0.4s;
+  }
+}
