@@ -1,0 +1,12 @@
+@use "../../../../sass/vars";
+@use "../../../../sass/functions";
+
+h2 {
+  text-align: center;
+  margin-bottom: functions.px2rem(16px);
+  font-size: functions.px2rem(36px);
+
+  span {
+    color: vars.$colorHighlight;
+  }
+}

@@ -2,5 +2,7 @@
 
 .container {
   min-height: 65vh;
-  margin-top: functions.px2rem(16px);
+  max-width: 1280px;
+  width: 100%;
+  margin: functions.px2rem(16px) auto;
 }
