@@ -49,3 +49,25 @@
     font-style: italic;
   }
 }
+
+.search-container {
+  margin-bottom: functions.px2rem(32px);
+  width: 100%;
+
+  form {
+    width: 30%;
+    position: relative;
+  }
+
+  fa-icon {
+    position: absolute;
+    top: functions.px2rem(8px);
+    left: functions.px2rem(8px);
+  }
+
+  input {
+    padding: functions.px2rem(8px);
+    width: 100%;
+    text-align: center;
+  }
+}
