@@ -1,8 +1,0 @@
-@use "../sass/functions";
-
-.container {
-  min-height: 65vh;
-  max-width: 1280px;
-  width: 100%;
-  margin: functions.px2rem(16px) auto;
-}
