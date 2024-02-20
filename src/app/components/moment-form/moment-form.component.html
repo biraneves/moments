@@ -1,4 +1,9 @@
-<form (ngSubmit)="submit()" [formGroup]="momentForm" #formDir="ngForm">
+<form
+  class="flex flex-col w-1/2 mx-auto"
+  (ngSubmit)="submit()"
+  [formGroup]="momentForm"
+  #formDir="ngForm"
+>
   <input type="hidden" formControlName="id" />
   <div class="form-group">
     <label for="title">Título</label>
@@ -15,6 +20,7 @@
   <div class="form-group">
     <label for="description">Descrição</label>
     <textarea
+      class="h-40"
       placeholder="O que aconteceu nesse momento?"
       formControlName="description"
       required
@@ -26,9 +32,13 @@
       <p *ngIf="description.errors?.['required']">A descrição é obrigatória.</p>
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group mt-3">
     <label for="image">Envie a foto que mais marcou esse momento</label>
-    <input type="file" (change)="onFileSelected($event)" />
+    <input
+      class="mt-1 w-full p-1 rounded-md border-2 text-zinc-700 file:mr-5 file:border-none file:bg-sky-300 file:text-sky-900 file:p-2 file:rounded-full file:px-4 file:cursor-pointer file:hover:bg-sky-900 file:hover:text-sky-300 transition-all"
+      type="file"
+      (change)="onFileSelected($event)"
+    />
   </div>
   <input type="submit" value="{{ btnText }}" />
 </form>

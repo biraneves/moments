@@ -1,6 +1,7 @@
-<div *ngIf="moment">
-  <h2>
-    Editando o momento <span>{{ moment.title }}</span>
+<div class="text-center" *ngIf="moment">
+  <h2 class="mt-20 mb-8 font-medium text-3xl">
+    Editando o momento
+    <span class="block mt-2 text-orange-400">{{ moment.title }}</span>
   </h2>
   <bn-moment-form
     (onSubmit)="editHandler($event)"

@@ -11,3 +11,37 @@ h6,
 button {
   @apply font-display;
 }
+
+.form-group {
+  @apply flex;
+  @apply flex-col;
+  @apply mb-3;
+  @apply text-start;
+
+  label {
+    @apply mb-1;
+  }
+
+  input[type="text"],
+  textarea {
+    @apply border-2;
+    @apply p-2;
+    @apply rounded-md;
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+
+input[type="submit"] {
+  @apply mt-3;
+  @apply px-4;
+  @apply py-2;
+  @apply bg-sky-300;
+  @apply text-sky-900;
+  @apply rounded-full;
+  @apply cursor-pointer;
+  @apply hover:bg-sky-900;
+  @apply hover:text-sky-300;
+}
