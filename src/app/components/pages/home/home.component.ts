@@ -15,7 +15,8 @@ export class HomeComponent implements OnInit {
   moments: Moment[] = [];
   baseApiUrl: string = environment.baseApiUrl;
 
-  // TODO: Search
+  faSearch = faSearch;
+  searchTerm: string = '';
 
   constructor(private momentService: MomentsService) {}
 
