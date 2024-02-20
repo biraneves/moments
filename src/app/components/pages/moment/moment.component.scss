@@ -1,0 +1,43 @@
+@use "../../../../sass/functions";
+@use "../../../../sass/vars";
+
+.moment {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+
+  h1 {
+    margin-bottom: functions.px2rem(16px);
+  }
+
+  img {
+    max-width: functions.px2rem(500px);
+    margin-bottom: 0 auto functions.px2rem(16px);
+  }
+
+  .about-moment,
+  .actions {
+    border-bottom: 1px solid #ccc;
+    padding: functions.px2rem(20px);
+    width: 100%;
+  }
+
+  .actions {
+    background-color: #eee;
+  }
+
+  .comments {
+    margin-bottom: functions.px2rem(16px);
+    padding: functions.px2rem(24px) 0;
+  }
+}
+
+.about-moment h3,
+.actions h3,
+.comments h3 {
+  margin-bottom: functions.px2rem(16px);
+}

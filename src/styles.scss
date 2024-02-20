@@ -66,3 +66,42 @@ form {
     padding-left: functions.px2rem(4px);
   }
 }
+
+.edit-btn,
+.remove-btn {
+  border: 1px solid #efefef;
+  padding: functions.px2rem(6px) functions.px2rem(16px);
+  font-size: functions.px2rem(16px);
+  margin: 0 functions.px2rem(8px);
+  cursor: pointer;
+  background-color: #fff;
+  transition: all ease 0.4s;
+
+  fa-icon {
+    margin-right: functions.px2rem(4px);
+  }
+}
+
+.edit-btn,
+.edit-btn path {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+.edit-btn:hover,
+.edit-btn:hover path {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.remove-btn,
+.remove-btn path {
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+.remove-btn:hover,
+.remove-btn:hover path {
+  color: #fff;
+  background-color: #dc3545;
+}
