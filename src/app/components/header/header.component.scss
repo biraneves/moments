@@ -1,0 +1,12 @@
+nav {
+  ul {
+    li {
+      @apply ml-4;
+    }
+  }
+}
+
+a {
+  @apply text-orange-500;
+  @apply hover:text-orange-800;
+}

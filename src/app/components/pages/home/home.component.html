@@ -1,9 +1,12 @@
-<div class="home-container">
-  <h1>Veja o que estão compartilhando</h1>
-  <div class="search-container">
-    <form>
-      <fa-icon [icon]="faSearch" />
+<div>
+  <h1 class="text-4xl font-medium text-center mb-6">
+    Veja o que estão compartilhando
+  </h1>
+  <div class="w-full flex justify-center mb-4">
+    <form class="w-1/3 relative">
+      <fa-icon class="absolute top-2 left-2 text-gray-400" [icon]="faSearch" />
       <input
+        class="p-2 text-center bg-gray-100 w-full rounded-md"
         type="text"
         placeholder="ou busque por um momento..."
         (input)="search($event)"
@@ -11,16 +14,34 @@
     </form>
   </div>
   <div *ngIf="moments.length > 0; else noMoments">
-    <div class="moments-container">
-      <div class="moment" *ngFor="let moment of moments">
+    <div class="columns-3 gap-4">
+      <div
+        class="image-container inline-block w-full bg-white mb-4 relative"
+        *ngFor="let moment of moments"
+      >
         <img
+          class="block w-full rounded-xl"
           src="{{ baseApiUrl }}uploads/{{ moment.image }}"
           alt="{{ moment.title }}"
         />
-        <h3>{{ moment.title }}</h3>
-        <p class="date">Em: {{ moment.created_at }}</p>
-        <p>Comentários: {{ moment.comments!.length }}</p>
-        <p><a routerLink="moments/{{ moment.id }}">Detalhes</a></p>
+        <div
+          class="image-caption flex absolute flex-col justify-between text-white w-full h-full top-0 left-0 p-6 rounded-xl bg-black bg-opacity-70"
+        >
+          <div>
+            <h3 class="font-semibold">{{ moment.title }}</h3>
+            <p class="text-sm">Em: {{ moment.created_at }}</p>
+          </div>
+          <p class="text-center my-5">
+            Comentários: {{ moment.comments!.length }}
+          </p>
+          <p>
+            <a
+              class="bg-sky-300 w-full inline-block text-center font-semibold text-sky-900 p-2 rounded-full hover:bg-sky-900 hover:text-sky-300 transition-all"
+              routerLink="moments/{{ moment.id }}"
+              >Detalhes</a
+            >
+          </p>
+        </div>
       </div>
     </div>
   </div>
