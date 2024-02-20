@@ -33,6 +33,7 @@
   .comments {
     margin-bottom: functions.px2rem(16px);
     padding: functions.px2rem(24px) 0;
+    width: 100%;
   }
 }
 
@@ -40,4 +41,37 @@
 .actions h3,
 .comments h3 {
   margin-bottom: functions.px2rem(16px);
+}
+
+.comment-container {
+  text-align: left;
+  border-bottom: solid 1px #efefef;
+  padding: functions.px2rem(16px) 0;
+
+  .comment {
+    font-size: functions.px2rem(14px);
+  }
+
+  .author {
+    font-size: functions.px2rem(12px);
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.comment-form {
+  margin-bottom: functions.px2rem(48px);
+
+  form {
+    margin-top: functions.px2rem(16px);
+    text-align: left;
+    max-width: 300px;
+    margin-left: 0;
+
+    textarea {
+      resize: none;
+    }
+  }
 }
